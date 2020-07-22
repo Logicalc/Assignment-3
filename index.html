@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Party Tickets Order Form</title>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<!-- header starts -->
+		<header>
+			<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+			<div id="line-1">The Halloween Store</div>
+			<div id="line-2">For the little Goblin in all of us!</div>
+		</header>
+		
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about_us.html">About Us</a>
+					<ul>						
+						<li><a href="our_history.html">Our History</a></li>
+						<li><a href="our_team.html">Our Team</a></li>
+					</ul>
+				</li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html" class="current">Party Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content starts -->
+		<main>
+			<!-- sidebar starts -->
+			<aside>
+				<ul>
+					<li><a href="products/props.html">Props</a></li>
+					<li><a href="products/costumes.html">Costumes</a></li>
+					<li><a href="products/special.html">Special FX</a></li>
+					<li><a href="products/masks.html">Masks</a></li>
+				</ul>
+			</aside>
+			<!-- the main section of the content starts -->
+			<section>
+				<h1>Buy Tickets for a Halloween Party</h1>
+				<form action="place_order.html" method="post" name"order_form">
+				<!-- the order form starts -->
+		    <fieldset>
+				<legend>Member Information</legend>
+				    <label for="email">E-Mail:</label>
+				    <input type="email" name="email" id="email" autofocus required title="Your Email address"><br>
+					<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" id="first_name"required title="Your first name"><br>
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" id="last_name"required title="Your last name"><br>
+					<label for="address">Address:</label>
+					<input type="text" name="address" id="address" title="Your home address"><br>
+					<label for="city">City:</label>
+					<input type="text" name="city" id="city"required><br>
+					<label for="province">Province:</label>
+					<input type="text" name="province" id="province" maxlength="2" placeholder="2-letter code" 
+					title="Expecting a 2-letter code" required><br>
+					<label for="postal_code">Postal Code:</label>
+					<input type="text" name="postal_code" id="postal_code" maxlength="6" placeholder="6 characters" 
+					title="Expecting exactly 6 alphanumeric characters" required><br>
+					<label for="phone">Phone Number:</label>
+					<input type="phone" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" 
+					title="Expecting the value to be provided in '999-999-9999' format"><br>
+			</fieldset>
+
+            <fieldset>
+				<legend>Ordering Information</legend>
+				    <label for=party>Party:</label>
+				    <select name="party" id="party">
+				        <option value="F">Fang-tastic Feast</option>
+				        <option value="F">Friday Night</option>
+				        <option value="G">Ghouls' Night Out</option>
+				        <option value="M">Monster Mash</option>
+				    </select><br>
+				    <label for=order_type>Order Type:</label>
+				    <select name="order type" id="order_type">
+				        <option value="M">Member Package</option>
+				        <option value="D">Donor Package</option>
+				        <option value="S">Single Tickets</option>
+                    </select><br>
+                    <label for=number_of_Tickets>Number of Tickets:</label>
+                    <input type="text" name=number_of_tickets id="number_of_ticket" maxlength="3" placeholder="Number of tickets" 
+                    title="Expecting a number"><br>
+            </fieldset>
+
+            <fieldset id="payment">
+				<legend>Payment Method</legend>
+				<input type="radio" name="payment" id="bill_me" value="bill me">Bill Me
+				<input type="radio" name="payment" id="credit_card" value="credit card">Credit Card
+            </fieldset>
+
+            <fieldset>
+				<legend>Credit Card Information</legend>
+				    <label for=card_type>Card Type:</label>
+				    <select name="card type" id="card type">
+				        <option value="V">Visa</option>
+				        <option value="M">Master Card</option>
+				        <option value="D">Discover</option>
+				    </select>
+					<label for="Card_Number">Card Number:</label>
+					<input type="text" name="Card_Number" id="postal_code" maxlength="16" placeholder="16 digits" required title="Your 16 digit credit card number"><br>
+					<label for=experation_date>Experation Date:</label>
+				    <select name="experation date" id="experation_date">
+				        <option value="J">January</option>
+				        <option value="F">Febuary</option>
+				        <option value="M">March</option>
+				        <option value="A">April</option>
+				        <option value="M">May</option>
+				        <option value="J">June</option>
+				        <option value="J">July</option>
+				        <option value="A">August</option>
+				        <option value="S">September</option>
+				        <option value="O">October</option>
+				        <option value="N">November</option>
+				        <option value="D">December</option>
+				    </select>
+				    <select name="year" id="year">
+				        <option value="15">2015</option>
+				        <option value="16">2016</option>
+				        <option value="17">2017</option>
+				        <option value="18">2018</option>
+				        <option value="19">2019</option>
+				    </select>
+
+            </fieldset>					
+
+			<fieldset id="buttons">
+				<legend>Submit Your Order</legend>
+					<input type="reset" id="reset_fields" value="Reset Fields">
+					<form action="place_order">
+					<input type="submit" id="submit" value="Submit">
+					</form>
+		    </fieldset>
+		        </form>
+			</section>
+		</main>
+
+		<!-- footer starts -->
+		<footer>
+			<p>&copy; 2020 Spencer Chasles</p>
+		</footer>
+	</body>
+</html>
